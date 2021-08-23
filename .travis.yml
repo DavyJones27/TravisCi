@@ -3,7 +3,9 @@ sudo: required
 services:
   - docker
 
-# language: node_js
+language: node_js
+node_js:
+- '10.19.0'
 
 before_install:
   - docker build -t davy/jbook -f Dockerfile.dev .

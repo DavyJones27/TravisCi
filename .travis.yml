@@ -7,6 +7,6 @@ before_install:
   - docker build -t davy/jbook -f Dockerfile.dev .
 
 script:
-  - docker run davy/jbook npm run test -- --coverage
+  - travis_wait docker run davy/jbook npm run test -- --coverage
 
 
